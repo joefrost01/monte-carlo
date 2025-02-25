@@ -13,7 +13,7 @@ rand_pcg = "0.9.0"
 rayon = "1.7"
 libm = "0.2.11"
 bytemuck = { version = "1.7", features = ["derive"] }
-wgpu = "0.13"  # or the version you're targeting (the code here targets wgpu 0.13+/24 API changes)
+wgpu = "0.13"
 futures = "0.3"
 pollster = "0.3"
 
