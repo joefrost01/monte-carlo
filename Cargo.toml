@@ -1,0 +1,26 @@
+[package]
+name = "monte-carlo"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+rand = "0.9.0"
+rand_distr = "0.5.1"
+rand_pcg = "0.9.0"
+rayon = "1.7"
+libm = "0.2.11"
+bytemuck = { version = "1.7", features = ["derive"] }
+wgpu = "0.13"  # or the version you're targeting (the code here targets wgpu 0.13+/24 API changes)
+futures = "0.3"
+pollster = "0.3"
+
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+debug = false
